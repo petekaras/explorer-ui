@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "_cacheHeaders": {
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "main": "index.js",
+  "_source": "https://apis.google.com/js/client.js",
+  "_target": "*",
+  "_originalSource": "https://apis.google.com/js/client.js",
+  "_direct": true
+}
