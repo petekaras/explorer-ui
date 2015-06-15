@@ -1,0 +1,5 @@
+{
+  "directory": "app/components",
+  "json": "bower.json",
+"allow_root": true
+}
