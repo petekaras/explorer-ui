@@ -10,24 +10,16 @@
  */
 angular
   .module('explorerUiApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ui.bootstrap', 
+    'ngTable', 
+    'darthwade.dwLoading'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/index-tree.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'appController'
       })
       .otherwise({
         redirectTo: '/'

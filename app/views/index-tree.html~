@@ -1,65 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-<title>Explorer</title>
-
-
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-
-
-
-<!--Bootstrap + angular-->
-<script src="/components/angular/angular.js"></script>
-<link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css" />
-<script src="/components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<!--Google endpoint API-->
-<script src="/components/client/index.js"></script>
-<!--D3-->
-<script src="/components/d3/d3.min.js"></script>
-<!--ng-table-->
-<script src="/components/ng-table/dist/ng-table.min.js"></script>
-<!-- Spinner -->
-<script src="/components/spin.js/spin.js"></script>
-<link rel="stylesheet" type="text/css" href="/components/angular-loading/angular-loading.css"/>
-<script src="/components/angular-loading/angular-loading.js"></script>
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<!--Google API loader -->
-<script src="/scripts/initGapi.js"></script>
-<!--Viewer-->
-<script src="/scripts/viewer/ViewerApp.js"></script>
-<script src="/scripts/viewer/ViewerDataService.js"></script>
-<link href="/scripts/viewer/Viewer.css" rel="stylesheet">
-<!--Dependency tree -->
-<script src="/scripts/tree/TreeDirective.js"></script>
-<link href="/scripts/tree/Tree.css" rel="stylesheet">
-<!-- endbuild -->
-</head>
-
-
-<body ng-app="app" ng-controller="appController" onload='init()'>
 <div dw-loading="libraries"  class="users-list">
-
-
-	<div class="container">
 	
 
-	
-		<div class="jumbotron">
-			<h1>Dependency</h1>
-			<p>Search for Maven artifacts and visualize their dependencies.</p>
-		</div>
-		
-		<div>
-		  <alert  type="{{message.type}}" >{{message.msg}}</alert>
-		</div>
 		
 		<tabset justified="true"> <tab heading="Search for an Artifact">
 
@@ -112,6 +54,6 @@
 
 		<tree-visualization val="data"></tree-visualization>
 
-	</div>
+
 </div>
-</body>
+

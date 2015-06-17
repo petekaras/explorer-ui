@@ -1,11 +1,10 @@
-var app = angular.module('app', [ 'ui.bootstrap', 'ngTable', 'darthwade.loading' ]);
-
-app.controller('hideTableCtrl', function($scope) {
+//var app = angular.module('app', [ 'ui.bootstrap', 'ngTable', 'darthwade.dwLoading' ]);
+angular.module('explorerUiApp').controller('hideTableCtrl', function($scope) {
 	$scope.isCollapsed = false;
 });
 
 
-app.controller('appController', function($scope, DataService,$filter, $loading, ngTableParams) {
+angular.module('explorerUiApp').controller('appController', function($scope, DataService,$filter, $loading, ngTableParams) {
 
 	$scope.libraries = [];
 	$scope.message = { type: 'success', msg: 'Search for an artifact and the dependcy will be visualized below...' };

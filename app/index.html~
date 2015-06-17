@@ -36,15 +36,15 @@
 
 <!--Google API loader -->
 <script src="https://apis.google.com/js/client.js"></script>
-<script src="scripts/initGapi.js"></script>
+<script src="/scripts/initGapi.js"></script>
 <!--Viewer-->
-<script src="scripts/app.js"></script>
-<script src="scripts/viewer/ViewerApp.js"></script>
-<script src="scripts/viewer/ViewerDataService.js"></script>
-<link href="scripts/viewer/Viewer.css" rel="stylesheet">
+<script src="/scripts/app.js"></script>
+<script src="/scripts/viewer/ViewerApp.js"></script>
+<script src="/scripts/viewer/ViewerDataService.js"></script>
+<link href="/scripts/viewer/Viewer.css" rel="stylesheet">
 <!--Dependency tree -->
-<script src="scripts/tree/TreeDirective.js"></script>
-<link href="scripts/tree/Tree.css" rel="stylesheet">
+<script src="/scripts/tree/TreeDirective.js"></script>
+<link href="/scripts/tree/Tree.css" rel="stylesheet">
 
 </head>
 <body ng-app="explorerUiApp" ng-controller="appController" onload='init()'>

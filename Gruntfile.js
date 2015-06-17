@@ -325,7 +325,8 @@ module.exports = function (grunt) {
     // Replace Google CDN references
     cdnify: {
       dist: {
-        html: ['<%= yeoman.dist %>/views/*.html']
+        html: ['<%= yeoman.dist %>/views/*.html'],
+	bower: 'bower.json'
       }
     },
 
@@ -341,10 +342,11 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-	    'scripts/{,*/}*.js',
-	    'components/{,*/}*.js',
-	    'components/{,*/}*.css',	
+	    'scripts/**/*.js',
+	    'scripts/**/*.css',	
             'views/{,*/}*.html',
+	    'components/**/*.js',
+	    'components/**/*.css',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
@@ -363,7 +365,7 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
+        dest: '<%= yeoman.dist %>/styles/',
         src: '{,*/}*.css'
       }
     },

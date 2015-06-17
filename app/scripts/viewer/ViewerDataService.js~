@@ -1,4 +1,4 @@
-angular.module('explorerUiApp').service('DataService', function() {
+app.service('DataService', function() {
 
 	this.getData = function($scope,$loading,details) {
 		var messageText;

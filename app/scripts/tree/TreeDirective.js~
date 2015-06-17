@@ -1,4 +1,4 @@
-angular.module('explorerUiApp').directive('treeVisualization', function() {
+app.directive('treeVisualization', function() {
 	// define constants and helpers used for the directive
 	// ...
 	var width = 600, height = 1000;

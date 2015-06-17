@@ -10,20 +10,16 @@
  */
 angular
   .module('explorerUiApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ui.bootstrap', 
+    'ngTable', 
+    'darthwade.dwLoading'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/index-tree.html',
+        controller: 'appController'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
