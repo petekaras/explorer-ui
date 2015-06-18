@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           authKey: 'key1'
         },
         src: 'dist',
-        dest: '/public_html/explorer',
+        dest: '/',
         exclusions: ['dist/components']
       }
     },
