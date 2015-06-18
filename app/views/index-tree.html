@@ -1,20 +1,23 @@
 
 <div dw-loading="libraries"  class="users-list">
-	
 
-		
 		<tabset justified="true"> <tab heading="Search for an Artifact">
-
-
 
 		<div ng-controller="hideTableCtrl">
 		<form name="simpleSearchForm" novalidate>
 			<input type="text" ng-model="simpleSearch.artifactId" class="form-control" placeholder="Artifact ID" required=""> <input class="btn btn-primary" type="submit" value="Search"
 				ng-click="getSimpleMavenData(simpleSearchForm,simpleSearch)">
+				<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Hide / Show table data</button>
 		</form>
-		<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Hide / Show table data</button>				
+		
+						
+		
+		<div>
+	  		<alert  type="{{message.type}}" >{{message.msg}}</alert>
+		</div>
+
 		<div collapse="isCollapsed">
-			<table ng-table="tableParams" class="table ng-table-responsive">
+			<table ng-table="tableParams" class="table">
 				<tbody>
 					<tr ng-repeat="library in $data" ng-click="getMavenDataFromTableClick(library)">
 						<td data-title="'Group Id'" sortable="'groupId'">{{library.group}}</td>
@@ -47,9 +50,10 @@
 
 		</tabset>
 
-
-		<tree-visualization val="data"></tree-visualization>
-
-
 </div>
+
+		<tree-visualization val="data" width="viewerWidth"></tree-visualization>
+
+
+
 

@@ -4,11 +4,12 @@ angular.module('explorerUiApp').controller('hideTableCtrl', function($scope) {
 });
 
 
-angular.module('explorerUiApp').controller('appController', function($scope, DataService,$filter, $loading, ngTableParams) {
+angular.module('explorerUiApp').controller('appController', function($scope, DataService,$filter, $loading, ngTableParams,$window) {
 
 	$scope.libraries = [];
-	$scope.message = { type: 'success', msg: 'Search for an artifact and the dependcy will be visualized below...' };
-
+	$scope.message = { type: 'success', msg: 'Search for an artifact and its dependencies will be visualized below...' };
+	//TODO: unfinished. set to be width of conatiner and redraw graph when resized.
+	$scope.viewerWidth = 12738712837;
 	$loading.setDefaultOptions({
 
 			  active: false, // Defines current loading state

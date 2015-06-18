@@ -1,14 +1,17 @@
 angular.module('explorerUiApp').directive('treeVisualization', function() {
 	// define constants and helpers used for the directive
 	// ...
-	var width = 600, height = 1000;
+	//TODO: hardcoded for now but link with width variable...
+	var width = 700; 
+	var height = 1000;
 
 	var svg = d3.select("body").append("svg").attr("width", width).attr("height", height).append("g").attr("transform", "translate(40,0)");
 	return {
 		restrict : 'E', // the directive can be invoked only by using
 		// <my-directive> tag in the template
 		scope : { // attributes bound to the scope of the directive
-			val : '='
+			val : '=',
+			width : '='
 		},
 		link : function(scope, element, attrs) {
 
@@ -53,6 +56,11 @@ angular.module('explorerUiApp').directive('treeVisualization', function() {
 
 					d3.select(self.frameElement).style("height", height + "px");
 				}
+			});
+
+			scope.$watch('width', function(newVal, oldVal) {
+				//TODO: to be implmented.
+				//alert(newVal);
 			});
 		}
 	};

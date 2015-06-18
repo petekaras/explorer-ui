@@ -33,6 +33,8 @@
 <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css" />
 <link rel="stylesheet" href="components/ng-table/dist/ng-table.min.css" />
 <!-- endbower -->
+<!-- not being picked up by wiredep ?-->
+<link rel="stylesheet" href="components/angular-loading/angular-loading.css" />
 
 <!--Google API loader -->
 <script src="https://apis.google.com/js/client.js"></script>
@@ -57,12 +59,10 @@
     <div class="container">
 	<div class="jumbotron">
 		<h1>Dependency...</h1>
-		<p>Search for Maven artifacts and visualize their dependencies.</p>
+		<p>Search for Maven artifacts and visualize their dependencies... updated</p>
 	</div>
 
-	<div>
-	  <alert  type="{{message.type}}" >{{message.msg}}</alert>
-	</div>
+
     <div ng-view=""></div>
     </div>
 

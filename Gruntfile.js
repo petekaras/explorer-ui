@@ -20,10 +20,23 @@ module.exports = function (grunt) {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
   };
+  grunt.loadNpmTasks('grunt-ftpush');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
+    //ftp deploy
+    ftpush: {
+      build: {
+        auth: {
+          host: 'ftp.peterkaras.com',
+          port: 21,
+          authKey: 'key1'
+        },
+        src: 'dist',
+        dest: '/public_html/explorer',
+        exclusions: ['dist/components']
+      }
+    },
     // Project settings
     yeoman: appConfig,
 
@@ -392,6 +405,7 @@ module.exports = function (grunt) {
         singleRun: true
       }
     }
+
   });
 
 
@@ -410,6 +424,7 @@ module.exports = function (grunt) {
     ]);
   });
 
+  
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
@@ -440,7 +455,9 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
-
+  grunt.registerTask('deploy', [
+    'ftpush'
+  ]);
   grunt.registerTask('default', [
     'newer:jshint',
     'test',

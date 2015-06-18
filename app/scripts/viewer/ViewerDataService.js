@@ -24,7 +24,7 @@ angular.module('explorerUiApp').service('DataService', function() {
 	
 	this.getSearchData = function($scope,details) {	
 		gapi.client.maven.maven.getLatestArtifacts(details).execute(function(resp) {
-			if(!resp.code){
+			if(typeof resp.items != 'undefined'){
 				messageText = "Showing all artifacts with id of : " + details.artifactId;
 				messageType = "success";
 				
