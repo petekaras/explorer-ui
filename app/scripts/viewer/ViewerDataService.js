@@ -4,7 +4,7 @@ angular.module('explorerUiApp').service('DataService', function() {
 		var messageText;
 		var messageType;
 
-		gapi.client.projectHub.projectHub.getDependencyTree(details).execute(function(resp) {
+		gapi.client.dependency.projectHub.artifact(details).execute(function(resp) {
 			//TODO: refactor messages into a helper service (unit test). Also handle different error code
 			
 			
@@ -23,7 +23,7 @@ angular.module('explorerUiApp').service('DataService', function() {
 	}
 	
 	this.getSearchData = function($scope,details) {	
-		gapi.client.projectHub.projectHub.getLatestArtifacts(details).execute(function(resp) {
+		gapi.client.dependency.projectHub.artifacts(details).execute(function(resp) {
 			if(typeof resp.items != 'undefined'){
 				messageText = "Showing all artifacts with id of : " + details.artifactId;
 				messageType = "success";
